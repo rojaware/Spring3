@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="shop" name="Shop" class="com.mkyong.common.Shop">
+		<constructor-arg value="scott"></constructor-arg>
+
+		<property name="address" ref="address"></property>
+	</bean>
+
+	<bean id="address" name="Address" class="com.mkyong.common.Address">
+		<constructor-arg name="street" value="181 Anthony Ave"></constructor-arg>
+		<constructor-arg name="postalCode" value="L4Z3V3"></constructor-arg>
+	</bean>
+</beans>
